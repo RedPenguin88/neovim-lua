@@ -1,16 +1,22 @@
-vim.opt.tabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.expandtab = true
-vim.opt.smartindent = true
-vim.opt.number = true
-vim.opt.relativenumber = true
-vim.opt.incsearch = true
-vim.opt.wrap = false
-vim.opt.scrolloff = 8
-vim.opt.sidescrolloff = 8
-vim.opt.clipboard = 'unnamedplus'
-vim.opt.mouse = 'a'
-vim.opt.ignorecase = true
-vim.opt.smartcase = true
-vim.opt.splitbelow = true
-vim.opt.splitright = true
+local options = {
+    tabstop = 4,
+    shiftwidth = 4,
+    expandtab = true,
+    smartindent = true,
+    number = true,
+    relativenumber = false,
+    incsearch = true,
+    wrap = false,
+    scrolloff = 8,
+    sidescrolloff = 8,
+    clipboard = 'unnamedplus',
+    mouse = 'a',
+    ignorecase = true,
+    smartcase = true,
+    splitbelow = true,
+    splitright = true
+}
+
+for k, v in pairs(options) do
+    vim.opt[k] = v
+end
