@@ -18,7 +18,7 @@ if not status_ok then
   return
 end
 
-return packer.startup(function(use)
+return packer.startup({function(use)
   use 'wbthomason/packer.nvim'  -- Package Manager
   use 'rebelot/kanagawa.nvim'   -- Colorscheme
 
@@ -26,6 +26,13 @@ return packer.startup(function(use)
     print 'Installing plugins. After completion, restart nvim...'
     require('packer').sync()
   end
-end)
+end,
+config = {
+  display = {
+    open_fn = function()
+      return require('packer.util').float({ border = 'rounded' })
+    end
+  }
+}})
 
 -- vim: ts=2 sts=2 sw=2 et
