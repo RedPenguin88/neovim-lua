@@ -12,7 +12,13 @@ vim.api.nvim_create_autocmd('BufWritePost', {
   pattern = 'plugins.lua',
 })
 
-return require('packer').startup(function(use)
+-- Use pcall to prevent errors
+local status_ok, packer = pcall(require, "packer")
+if not status_ok then
+  return
+end
+
+return packer.startup(function(use)
   use 'wbthomason/packer.nvim'  -- Package Manager
   use 'rebelot/kanagawa.nvim'   -- Colorscheme
 
