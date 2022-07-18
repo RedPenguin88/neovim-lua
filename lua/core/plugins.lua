@@ -21,6 +21,7 @@ end
 return packer.startup({function(use)
   use 'wbthomason/packer.nvim'  -- Package Manager
   use 'rebelot/kanagawa.nvim'   -- Colorscheme
+  use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
 
   if packer_bootstrap then
     print 'Installing plugins. After completion, restart nvim...'
