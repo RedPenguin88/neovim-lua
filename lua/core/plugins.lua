@@ -37,6 +37,11 @@ return packer.startup({function(use)
     "windwp/nvim-autopairs",
     config = function() require("plugins.autopairs") end
   }
+  -- Fast indentation detection
+  use {
+    "darazaki/indent-o-matic",
+    config = function() require("plugins.indent-o-matic") end
+  }
 
   if packer_bootstrap then
     print 'Installing plugins. After completion, restart nvim...'
