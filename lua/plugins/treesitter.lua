@@ -6,9 +6,12 @@ end
 config.setup {
   ensure_installed = "all",
   highlight = {
-    enable = true,
+    enable = true
   },
   indent = {
-    enable = true,
+    enable = true
+  },
+  autopairs = {
+    enable = true
   }
 }
