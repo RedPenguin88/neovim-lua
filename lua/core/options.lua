@@ -7,6 +7,7 @@ local options = {
     relativenumber = false,     -- show relative line numbers; matter of personal preference
     incsearch = true,           -- allows incrementally searching, useful for complicated regex
     wrap = false,               -- do not wrap text, instead displaying one long line
+    cursorline = true,          -- highlight the line the cursor is on, helps to find the cursor easily
     scrolloff = 8,              -- number of lines to show above and below the cursor
     sidescrolloff = 8,          -- number of lines to show to the left and right of the cursor
     clipboard = 'unnamedplus',  -- allow neovim to access your systems clipboard provider
