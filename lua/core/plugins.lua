@@ -22,12 +22,20 @@ return packer.startup({function(use)
   -- Package Manager
   use 'wbthomason/packer.nvim'
   -- Colorscheme
-  use { 'rebelot/kanagawa.nvim', config = function() require("plugins.colorscheme") end }
+  use {
+    'rebelot/kanagawa.nvim',
+    config = function() require("plugins.colorscheme") end
+  }
   -- Syntax Highlighting via treesitter
   use {
     'nvim-treesitter/nvim-treesitter',
     run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
     config = function() require("plugins.treesitter") end
+  }
+  -- Autopairs plugin
+  use {
+    "windwp/nvim-autopairs",
+    config = function() require("plugins.autopairs") end
   }
 
   if packer_bootstrap then
