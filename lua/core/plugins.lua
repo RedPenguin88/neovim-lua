@@ -9,7 +9,7 @@ local packer_group = vim.api.nvim_create_augroup('Packer', { clear = true })
 vim.api.nvim_create_autocmd('BufWritePost', {
   command = 'source <afile> | PackerSync',
   group = packer_group,
-  pattern = 'plugins.lua',
+  pattern = 'plugins.lua'
 })
 
 -- Use pcall to prevent errors
@@ -24,7 +24,11 @@ return packer.startup({function(use)
   -- Colorscheme
   use { 'rebelot/kanagawa.nvim', config = function() require("plugins.colorscheme") end }
   -- Syntax Highlighting via treesitter
-  use { 'nvim-treesitter/nvim-treesitter', config = function() require("plugins.treesitter") end, run = ':TSUpdate' }
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
+    config = function() require("plugins.treesitter") end
+  }
 
   if packer_bootstrap then
     print 'Installing plugins. After completion, restart nvim...'
