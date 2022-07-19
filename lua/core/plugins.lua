@@ -19,9 +19,12 @@ if not status_ok then
 end
 
 return packer.startup({function(use)
-  use 'wbthomason/packer.nvim'  -- Package Manager
-  use 'rebelot/kanagawa.nvim'   -- Colorscheme
-  use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
+  -- Package Manager
+  use 'wbthomason/packer.nvim'
+  -- Colorscheme
+  use { 'rebelot/kanagawa.nvim', config = function() require("plugins.colorscheme") end }
+  -- Syntax Highlighting via treesitter
+  use { 'nvim-treesitter/nvim-treesitter', config = function() require("plugins.treesitter") end, run = ':TSUpdate' }
 
   if packer_bootstrap then
     print 'Installing plugins. After completion, restart nvim...'
