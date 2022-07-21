@@ -5,6 +5,7 @@ local options = {
   cindent = true,             -- c-like indenting which behaves better than smartindent for me, personal preference
   number = true,              -- show line numbers
   relativenumber = false,     -- show relative line numbers; matter of personal preference
+  signcolumn = "yes",         -- always show the signcolumn
   incsearch = true,           -- allows incrementally searching, useful for complicated regex
   wrap = false,               -- do not wrap text, instead displaying one long line
   cursorline = true,          -- highlight the line the cursor is on, helps to find the cursor easily
