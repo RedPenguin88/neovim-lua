@@ -21,6 +21,8 @@ end
 return packer.startup({function(use)
   -- Package Manager
   use 'wbthomason/packer.nvim'
+  -- Optimize startup time
+  use 'lewis6991/impatient.nvim'
   -- Colorscheme
   use {
     'rebelot/kanagawa.nvim',
