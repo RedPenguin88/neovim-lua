@@ -12,3 +12,8 @@ keymap("n", "<C-l>", "<C-w>l", { silent = true })
 
 -- Clear highlights when searching
 keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", { silent = true })
+
+-- By default, markdown files enable wrap, so the following keymaps deal with
+-- this in a cleaner way
+keymap('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
+keymap('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
