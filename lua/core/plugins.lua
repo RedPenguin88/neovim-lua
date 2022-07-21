@@ -42,6 +42,13 @@ return packer.startup({function(use)
     "darazaki/indent-o-matic",
     config = function() require("plugins.indent-o-matic") end
   }
+  -- Configurations for Nvim LSP
+  use "neovim/nvim-lspconfig"
+  -- Easy-to-use LSP installer
+  use {
+    "williamboman/nvim-lsp-installer",
+    config = function() require("plugins.lsp") end
+  }
 
   if packer_bootstrap then
     print 'Installing plugins. After completion, restart nvim...'
