@@ -51,12 +51,19 @@ return packer.startup({function(use)
   }
 
   if packer_bootstrap then
-    print 'Installing plugins. After completion, restart nvim...'
+    print '*******************************************************'
+    print '*Installing plugins. After completion, restart nvim...*'
+    print '*******************************************************'
     require('packer').sync()
   end
 end,
 config = {
   display = {
+    working_sym = '勒',
+    error_sym = '',
+    done_sym = '',
+    removed_sym = '',
+    moved_sym = '',
     open_fn = function()
       return require('packer.util').float({ border = 'rounded' })
     end
