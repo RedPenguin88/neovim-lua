@@ -17,7 +17,8 @@ local options = {
   smartcase = true,           -- however, if the search query has uppercase characters, override ignorecase
   splitbelow = true,          -- make vertical splits insert a window below the current one (rather than above)
   splitright = true,          -- make horizontal splits insert a window to the right of the current one (rather than left)
-  termguicolors = true        -- Enable 24-bit RBG color; requires your terminal to support this feature
+  termguicolors = true,       -- Enable 24-bit RBG color; requires your terminal to support this feature
+  updatetime = 250
 }
 
 for k, v in pairs(options) do
