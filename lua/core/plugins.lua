@@ -68,6 +68,7 @@ return packer.startup({function(use)
     'lukas-reineke/indent-blankline.nvim',
     config = function() require("plugins.indent-blankline") end
   }
+  use 'p00f/nvim-ts-rainbow'
 
   if packer_bootstrap then
     print '*******************************************************'
