@@ -64,7 +64,10 @@ return packer.startup({function(use)
     config = function() require("plugins.cmp") end
   }
   -- Indent Lines
-  use 'lukas-reineke/indent-blankline.nvim'
+  use {
+    'lukas-reineke/indent-blankline.nvim',
+    config = function() require("plugins.indent-blankline") end
+  }
 
   if packer_bootstrap then
     print '*******************************************************'
