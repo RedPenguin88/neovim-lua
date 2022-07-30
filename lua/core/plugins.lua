@@ -68,6 +68,11 @@ return packer.startup({function(use)
     "lukas-reineke/indent-blankline.nvim",
     config = function() require("plugins.indent-blankline") end
   }
+  -- Gitsigns in signcolumn
+  use {
+    'lewis6991/gitsigns.nvim',
+    config = function() require("gitsigns").setup() end
+  }
 
   if packer_bootstrap then
     print "*******************************************************"
