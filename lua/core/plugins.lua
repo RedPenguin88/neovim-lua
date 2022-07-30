@@ -23,6 +23,12 @@ return packer.startup({function(use)
   use "wbthomason/packer.nvim"
   -- Optimize startup time
   use "lewis6991/impatient.nvim"
+  -- Lua functions
+  use "nvim-lua/plenary.nvim"
+  -- Popup API
+  use "nvim-lua/popup.nvim"
+  -- Fancy icons
+  use "kyazdani42/nvim-web-devicons"
   -- Colorscheme
   use {
     "rebelot/kanagawa.nvim",
