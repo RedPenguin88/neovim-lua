@@ -79,6 +79,18 @@ return packer.startup({function(use)
     "lewis6991/gitsigns.nvim",
     config = function() require("gitsigns").setup() end
   }
+  -- Telescope fuzzy finder
+  use {
+    "nvim-telescope/telescope.nvim",
+    config = function() require("plugins.telescope") end
+  }
+  -- Native telescope sorter
+  use {
+    "nvim-telescope/telescope-fzf-native.nvim",
+    after = "telescope.nvim",
+    run = "make",
+    config = function() require("telescope").load_extension("fzf") end
+  }
   -- Toggleable terminal
   use {
     "akinsho/toggleterm.nvim",

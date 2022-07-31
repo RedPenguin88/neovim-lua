@@ -17,3 +17,8 @@ keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", { silent = true })
 -- this in a cleaner way
 keymap("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 keymap("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
+
+-- Telescope
+keymap("n", "<leader>ff", ":Telescope find_files<CR>", { silent = true })
+keymap("n", "<leader>ft", ":Telescope live_grep<CR>", { silent = true })
+keymap("n", "<leader>fb", ":Telescope buffers<CR>", { silent = true })
