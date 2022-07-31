@@ -76,8 +76,13 @@ return packer.startup({function(use)
   }
   -- Gitsigns in signcolumn
   use {
-    'lewis6991/gitsigns.nvim',
+    "lewis6991/gitsigns.nvim",
     config = function() require("gitsigns").setup() end
+  }
+  -- Toggleable terminal
+  use {
+    "akinsho/toggleterm.nvim",
+    config = function() require("plugins.toggleterm") end
   }
 
   if packer_bootstrap then
