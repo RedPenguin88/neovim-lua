@@ -79,6 +79,11 @@ return packer.startup({function(use)
     "lewis6991/gitsigns.nvim",
     config = function() require("gitsigns").setup() end
   }
+  -- Statusbar
+  use {
+    "feline-nvim/feline.nvim",
+    config = function() require("plugins.feline") end
+  }
   use {
     "norcalli/nvim-colorizer.lua",
     config = function() require("colorizer").setup() end
