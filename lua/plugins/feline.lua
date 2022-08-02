@@ -6,6 +6,7 @@ end
 
 local default_colors = colors.setup()
 
+local lsp = require("feline.providers.lsp")
 local vi_mode = require("feline.providers.vi_mode")
 
 local vi_mode_colors = {
@@ -49,6 +50,44 @@ local comps = {
     hl = {
       fg = default_colors.crystalBlue,
       style = "bold"
+    }
+  },
+  diag = {
+    error = {
+      provider = "diagnostic_errors",
+      enabled = function()
+        return lsp.diagnostics_exist("Error")
+      end,
+      hl = {
+        fg = default_colors.samuraiRed
+      }
+    },
+    warn = {
+      provider = "diagnostic_warnings",
+      enabled = function()
+        return lsp.diagnostics_exist("Warn")
+      end,
+      hl = {
+        fg = default_colors.roninYellow
+      }
+    },
+    hint = {
+      provider = "diagnostic_hints",
+      enabled = function()
+        return lsp.diagnostics_exist("Hint")
+      end,
+      hl = {
+        fg = default_colors.dragonBlue
+      }
+    },
+    info = {
+      provider = "diagnostic_info",
+      enabled = function()
+        return lsp.diagnostics_exist("Info")
+      end,
+      hl = {
+        fg = default_colors.waveAqua
+      }
     }
   },
   git = {
@@ -135,6 +174,10 @@ table.insert(components.inactive, {})
 
 table.insert(components.active[1], comps.vi_mode)
 table.insert(components.active[1], comps.file_info)
+table.insert(components.active[1], comps.diag.error)
+table.insert(components.active[1], comps.diag.warn)
+table.insert(components.active[1], comps.diag.hint)
+table.insert(components.active[1], comps.diag.info)
 table.insert(components.active[3], comps.git.branch)
 table.insert(components.active[3], comps.git.added)
 table.insert(components.active[3], comps.git.changed)
