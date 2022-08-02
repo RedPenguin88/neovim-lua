@@ -86,7 +86,7 @@ local comps = {
         return lsp.diagnostics_exist("Info")
       end,
       hl = {
-        fg = default_colors.waveAqua
+        fg = default_colors.waveAqua1
       }
     }
   },
