@@ -10,6 +10,13 @@ keymap("n", "<C-j>", "<C-w>j", { silent = true })
 keymap("n", "<C-k>", "<C-w>k", { silent = true })
 keymap("n", "<C-l>", "<C-w>l", { silent = true })
 
+-- Navigate buffers
+keymap("n", "<S-h>", "<Cmd>BufferPrevious<CR>", { silent = true })
+keymap("n", "<S-l>", "<Cmd>BufferNext<CR>", { silent = true })
+
+-- Close buffer
+keymap("n", "<S-q>", "<Cmd>BufferClose<CR>", { silent = true })
+
 -- Stay in indent mode when shifting lines
 keymap("v", "<", "<gv", { silent = true })
 keymap("v", ">", ">gv", { silent = true })

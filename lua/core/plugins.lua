@@ -84,6 +84,11 @@ return packer.startup({function(use)
     "feline-nvim/feline.nvim",
     config = function() require("plugins.feline") end
   }
+  -- Tabline
+  use {
+    "romgrk/barbar.nvim",
+    config = function() require("plugins.barbar") end
+  }
   use {
     "norcalli/nvim-colorizer.lua",
     config = function() require("colorizer").setup() end
