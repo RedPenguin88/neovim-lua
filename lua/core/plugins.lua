@@ -110,6 +110,11 @@ return packer.startup({function(use)
     "akinsho/toggleterm.nvim",
     config = function() require("plugins.toggleterm") end
   }
+  -- Startup
+  use {
+    "goolord/alpha-nvim",
+    config = function() require("plugins.alpha") end
+  }
 
   if packer_bootstrap then
     print "*******************************************************"
