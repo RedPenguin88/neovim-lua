@@ -113,6 +113,11 @@ return packer.startup({function(use)
     "akinsho/toggleterm.nvim",
     config = function() require("plugins.toggleterm") end
   }
+  -- Commenting plugin
+  use {
+      'numToStr/Comment.nvim',
+      config = function() require("Comment").setup() end
+  }
   -- Startup
   use {
     "goolord/alpha-nvim",
