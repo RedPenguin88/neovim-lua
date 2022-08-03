@@ -23,4 +23,10 @@ dashboard.section.buttons.val = {
   dashboard.button("q", " " .. " Quit", ":qa<CR>"),
 }
 
+dashboard.section.footer.val = function()
+  local plugins = #vim.tbl_keys(packer_plugins)
+  local version = vim.version()
+  return "  " .. plugins .. " Plugins  Neovim v" .. version.major .. "." .. version.minor
+end
+
 alpha.setup(dashboard.opts)
