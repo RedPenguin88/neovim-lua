@@ -18,3 +18,16 @@ vim.api.nvim_create_autocmd({"FileType"}, {
   end,
   group = filetype_group
 })
+
+local hide_group = vim.api.nvim_create_augroup("HideGroup", { clear = true })
+-- Hide statusline and tabline when in Alpha
+vim.api.nvim_create_autocmd({"User"}, {
+  pattern = { "AlphaReady" },
+  callback = function()
+    vim.cmd [[
+      set showtabline=0 | autocmd BufUnload <buffer> set showtabline=2
+      set laststatus=0 | autocmd BufUnload <buffer> set laststatus=3
+    ]]
+  end,
+  group = hide_group
+})

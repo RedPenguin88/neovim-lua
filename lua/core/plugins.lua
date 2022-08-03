@@ -86,9 +86,12 @@ return packer.startup({function(use)
   }
   -- Tabline
   use {
-    "romgrk/barbar.nvim",
-    config = function() require("plugins.barbar") end
+    "akinsho/bufferline.nvim",
+    config = function() require("plugins.bufferline") end
   }
+  -- Better behavior for deleting buffers
+  use 'famiu/bufdelete.nvim'
+  -- Performant color highlighter
   use {
     "norcalli/nvim-colorizer.lua",
     config = function() require("colorizer").setup() end
