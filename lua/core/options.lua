@@ -20,7 +20,10 @@ local options = {
   splitright = true,                      -- make horizontal splits insert a window to the right of the current one (rather than left)
   termguicolors = true,                   -- enable 24-bit RBG color; requires your terminal to support this feature
   updatetime = 250,                       -- shorten update time, mostly for CursorHold event
-  laststatus = 3                          -- enable global status line
+  laststatus = 3,                         -- enable global status line
+  showmode = false,                       -- do not show the mode on the last line
+  showcmd = false,                        -- do not show cmd in the last line
+  ruler = false,                          -- do not show the ruler in the last line
 }
 
 -- Set the characters that separate splits to be slightly thicker
