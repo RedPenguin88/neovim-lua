@@ -91,6 +91,11 @@ return packer.startup({function(use)
   }
   -- Better behavior for deleting buffers
   use 'famiu/bufdelete.nvim'
+  -- File tree
+  use {
+    "kyazdani42/nvim-tree.lua",
+    config = function() require("plugins.nvim-tree") end
+  }
   -- Performant color highlighter
   use {
     "norcalli/nvim-colorizer.lua",

@@ -11,6 +11,7 @@ bufferline.setup {
     modified_icon = "",
     show_close_icon = false,
     separator_style = "thin",
+    offsets = { { filetype = "NvimTree", text = "File Explorer", padding = 1, text_align = "center" } },
   },
   highlights = {
     fill = { guibg = { attribute = "bg", highlight = "Normal" } },
