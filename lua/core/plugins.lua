@@ -1,7 +1,7 @@
 local fn = vim.fn
 local install_path = fn.stdpath("data").."/site/pack/packer/start/packer.nvim"
 if fn.empty(fn.glob(install_path)) > 0 then
-  packer_bootstrap = fn.system({"git", "clone", "--depth", "1", "https://github.com/wbthomason/packer.nvim", install_path})
+  PACKER_BOOTSTRAP = fn.system({"git", "clone", "--depth", "1", "https://github.com/wbthomason/packer.nvim", install_path})
 end
 
 -- Automatically source and re-compile packer whenever you save this file.
@@ -129,7 +129,7 @@ return packer.startup({function(use)
     config = function() require("plugins.alpha") end
   }
 
-  if packer_bootstrap then
+  if PACKER_BOOTSTRAP then
     print "*******************************************************"
     print "*Installing plugins. After completion, restart nvim...*"
     print "*******************************************************"
