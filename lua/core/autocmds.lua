@@ -1,7 +1,7 @@
 local highlight_group = vim.api.nvim_create_augroup("YankHighlight", { clear = true })
 -- Highlight on yank
 vim.api.nvim_create_autocmd("TextYankPost", {
-  pattern = '*',
+  pattern = "*",
   callback = function()
     vim.highlight.on_yank()
   end,
@@ -11,7 +11,7 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 local filetype_group = vim.api.nvim_create_augroup("FiletypeGroup", { clear = true})
 -- Set wrap and spell in markdown
 vim.api.nvim_create_autocmd({"FileType"}, {
-  pattern = 'markdown',
+  pattern = "markdown",
   callback = function()
     vim.opt_local.wrap = true
     vim.opt_local.spell = true
@@ -22,7 +22,7 @@ vim.api.nvim_create_autocmd({"FileType"}, {
 local hide_group = vim.api.nvim_create_augroup("HideGroup", { clear = true })
 -- Hide statusline and tabline when in Alpha
 vim.api.nvim_create_autocmd({"User"}, {
-  pattern = { "AlphaReady" },
+  pattern = "AlphaReady",
   callback = function()
     vim.cmd [[
       set showtabline=0 | autocmd BufUnload <buffer> set showtabline=2
