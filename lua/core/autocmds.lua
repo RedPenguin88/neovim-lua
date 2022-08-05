@@ -31,3 +31,14 @@ vim.api.nvim_create_autocmd({"User"}, {
   end,
   group = hide_group
 })
+
+local quit_group = vim.api.nvim_create_augroup("QuitGroup", { clear = true })
+-- Use `q` to quit from common windows
+vim.api.nvim_create_autocmd({"Filetype"}, {
+  pattern = { "lspinfo", "help", "man" },
+  callback = function()
+    vim.keymap.set("n", "q", "<cmd>close<CR>", { silent = true })
+    vim.opt.buflisted = false
+  end,
+  group = quit_group
+})
