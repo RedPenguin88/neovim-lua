@@ -58,17 +58,32 @@ return packer.startup({function(use)
     config = function() require("plugins.lsp") end
   }
   -- Completion
-  use "hrsh7th/cmp-nvim-lsp"
-  use "hrsh7th/cmp-buffer"
-  use "hrsh7th/cmp-path"
-  use "hrsh7th/cmp-nvim-lua"
-  use "L3MON4D3/LuaSnip"
-  use "saadparwaiz1/cmp_luasnip"
-  use "rafamadriz/friendly-snippets"
+  use {
+    "hrsh7th/cmp-nvim-lsp",
+    after = "nvim-cmp"
+  }
+  use {
+    "hrsh7th/cmp-buffer",
+    after = "nvim-cmp"
+  }
+  use {
+    "hrsh7th/cmp-path",
+    after = "nvim-cmp"
+  }
+  use {
+    "hrsh7th/cmp-nvim-lua",
+    after = "nvim-cmp"
+  }
+  use {
+    "saadparwaiz1/cmp_luasnip",
+    after = "nvim-cmp"
+  }
   use {
     "hrsh7th/nvim-cmp",
     config = function() require("plugins.cmp") end
   }
+  use "L3MON4D3/LuaSnip"
+  use "rafamadriz/friendly-snippets"
   -- Indent Lines
   use {
     "lukas-reineke/indent-blankline.nvim",
@@ -82,18 +97,24 @@ return packer.startup({function(use)
   -- Statusbar
   use {
     "feline-nvim/feline.nvim",
+    after = "nvim-web-devicons",
     config = function() require("plugins.feline") end
   }
   -- Tabline
   use {
     "akinsho/bufferline.nvim",
+    after = "nvim-web-devicons",
     config = function() require("plugins.bufferline") end
   }
   -- Better behavior for deleting buffers
-  use 'famiu/bufdelete.nvim'
+  use {
+    "famiu/bufdelete.nvim",
+    cmd = { "Bdelete", "Bwipeout" }
+  }
   -- File tree
   use {
     "kyazdani42/nvim-tree.lua",
+    cmd = { "NvimTreeToggle" },
     config = function() require("plugins.nvim-tree") end
   }
   -- Performant color highlighter
@@ -104,6 +125,7 @@ return packer.startup({function(use)
   -- Telescope fuzzy finder
   use {
     "nvim-telescope/telescope.nvim",
+    cmd = "Telescope",
     config = function() require("plugins.telescope") end
   }
   -- Native telescope sorter
@@ -116,12 +138,14 @@ return packer.startup({function(use)
   -- Toggleable terminal
   use {
     "akinsho/toggleterm.nvim",
+    cmd = "ToggleTerm",
     config = function() require("plugins.toggleterm") end
   }
   -- Commenting plugin
   use {
-      'numToStr/Comment.nvim',
-      config = function() require("Comment").setup() end
+    'numToStr/Comment.nvim',
+    keys = { "gc", "gb", "g<", "g>" },
+    config = function() require("Comment").setup() end
   }
   -- Startup
   use {

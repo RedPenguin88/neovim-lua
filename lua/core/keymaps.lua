@@ -27,6 +27,9 @@ keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", { silent = true })
 -- Neo-tree
 keymap("n", "<leader>e", "<cmd>NvimTreeToggle<CR>", { silent = true })
 
+-- Toggle terminal
+keymap("n", "<C-\\>", "<cmd>ToggleTerm<CR>", { silent = true })
+
 -- By default, markdown files enable wrap, so the following keymaps deal with
 -- this in a cleaner way
 keymap("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
