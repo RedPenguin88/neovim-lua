@@ -24,6 +24,7 @@ local options = {
   showmode = false,                       -- do not show the mode on the last line
   showcmd = false,                        -- do not show cmd in the last line
   ruler = false,                          -- do not show the ruler in the last line
+  fillchars = { eob = " " }               -- do not show `~` on empty lines
 }
 
 -- Set the characters that separate splits to be slightly thicker
