@@ -24,5 +24,6 @@ goodies from the neovim nightly.
 ### Optional Dependencies
 
 - [ripgrep](https://github.com/BurntSushi/ripgrep) for Telescope's live grep
+- [fd](https://github.com/sharkdp/fd) for Telescope's finder
 
 *Remember to run `:checkhealth` to see if you are missing something!*
