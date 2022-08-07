@@ -14,3 +14,15 @@ goodies from the neovim nightly.
 - [Telescope](https://github.com/nvim-telescope/telescope.nvim): Powerful fuzzy finder for files, buffer, and more
 - [Toggleterm](https://github.com/akinsho/toggleterm.nvim): Toggleable terminal
 - More plugins can be found [here](lua/core/plugins.lua)
+
+## Dependencies
+
+- One [Nerd Font](https://www.nerdfonts.com/font-downloads) of your choice
+- [Neovim Nightly](https://github.com/neovim/neovim/wiki/Installing-Neovim)
+- Terminal which has true color support; see [this](https://github.com/termstandard/colors) for more information
+
+### Optional Dependencies
+
+- [ripgrep](https://github.com/BurntSushi/ripgrep) for Telescope's live grep
+
+*Remember to run `:checkhealth` to see if you are missing something!*
