@@ -13,3 +13,4 @@ goodies from the neovim nightly.
 - [Bufferline](https://github.com/akinsho/bufferline.nvim): Snazzy buffer line reminiscent of modern GUI editors
 - [Telescope](https://github.com/nvim-telescope/telescope.nvim): Powerful fuzzy finder for files, buffer, and more
 - [Toggleterm](https://github.com/akinsho/toggleterm.nvim): Toggleable terminal
+- More plugins can be found [here](lua/core/plugins.lua)
