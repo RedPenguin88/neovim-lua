@@ -18,7 +18,7 @@ goodies from the neovim nightly.
 ## Dependencies
 
 - One [Nerd Font](https://www.nerdfonts.com/font-downloads) of your choice
-- [Neovim Nightly](https://github.com/neovim/neovim/wiki/Installing-Neovim)
+- [Neovim 0.7](https://github.com/neovim/neovim/wiki/Installing-Neovim)
 - Terminal which has true color support; see [this](https://github.com/termstandard/colors) for more information
 
 ### Optional Dependencies
