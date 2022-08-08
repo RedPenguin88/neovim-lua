@@ -1,5 +1,8 @@
 # minvim
 
+![minvim_alpha](https://user-images.githubusercontent.com/105743189/183456357-32a52d1a-36cf-43c6-9f0d-0cccd26c2f20.png)
+![minvim_showcase](https://user-images.githubusercontent.com/105743189/183456408-b283975d-1d83-4eef-854d-6d45c30d8748.png)
+
 My (not so) minimal, and opinionated neovim configuration using the newest
 goodies from the neovim nightly.
 
