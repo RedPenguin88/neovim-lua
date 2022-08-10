@@ -116,7 +116,6 @@ local comps = {
   lsp_name = {
     provider = "lsp_client_names",
     left_sep = " ",
-    right_sep = " ",
     hl = {
       fg = default_colors.boatYellow2
     }
@@ -131,6 +130,7 @@ local comps = {
       local os = vim.bo.fileformat:upper()
       return icons[os] .. os
     end,
+    left_sep = " ",
     right_sep = " ",
     hl = {
       fg = default_colors.sakuraPink,
