@@ -14,9 +14,9 @@ bufferline.setup {
     offsets = { { filetype = "NvimTree", text = "File Explorer", padding = 1, text_align = "center" } },
   },
   highlights = {
-    fill = { guibg = { attribute = "bg", highlight = "Normal" } },
-    separator = { guifg = { attribute = "bg", highlight = "Normal" } },
-    separator_selected = { guifg = { attribute = "bg", highlight = "Normal" } },
-    separator_visible = { guifg = { attribute = "bg", highlight = "Normal" } },
+    fill = { bg = { attribute = "bg", highlight = "Normal" } },
+    separator = { fg = { attribute = "bg", highlight = "Normal" } },
+    separator_selected = { fg = { attribute = "bg", highlight = "Normal" } },
+    separator_visible = { fg = { attribute = "bg", highlight = "Normal" } },
   }
 }
