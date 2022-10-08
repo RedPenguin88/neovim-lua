@@ -32,6 +32,20 @@ vim.api.nvim_create_autocmd({"User"}, {
   group = hide_group
 })
 
+local color_group = vim.api.nvim_create_augroup("ColorGroup", { clear = true })
+-- Workaround to reload feline when running :Catppuccin <flavour>
+vim.api.nvim_create_autocmd("ColorScheme", {
+	pattern = "*",
+	callback = function()
+		package.loaded["feline"] = nil
+		package.loaded["catppuccin.groups.integrations.feline"] = nil
+		require("feline").setup {
+			components = require("catppuccin.groups.integrations.feline").get(),
+    }
+	end,
+  group = color_group
+})
+
 local quit_group = vim.api.nvim_create_augroup("QuitGroup", { clear = true })
 -- Use `q` to quit from common windows
 vim.api.nvim_create_autocmd({"Filetype"}, {
