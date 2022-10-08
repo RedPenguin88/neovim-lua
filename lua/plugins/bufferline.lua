@@ -1,10 +1,7 @@
-local ok, bufferline = pcall(require, "bufferline")
-if not ok then
-  return
-end
-
-local ctp_ok, ctp_bufferline = pcall(require, "catppuccin.groups.integrations.bufferline")
-if not ctp_ok then
+local buffer_ok, bufferline = pcall(require, "bufferline")
+local ctp_buffer_ok, ctp_bufferline = pcall(require, "catppuccin.groups.integrations.bufferline")
+local ctp_pal_ok, ctp_palette = pcall(require, "catppuccin.palettes")
+if not (buffer_ok and ctp_buffer_ok and ctp_pal_ok) then
   return
 end
 
@@ -18,5 +15,11 @@ bufferline.setup {
     separator_style = "thin",
     offsets = { { filetype = "NvimTree", text = "File Explorer", padding = 1, text_align = "center" } },
   },
-  highlights = ctp_bufferline.get()
+  highlights = ctp_bufferline.get {
+    custom = {
+      all = {
+        fill = { bg = ctp_palette.get_palette().mantle }
+      }
+    }
+  }
 }
