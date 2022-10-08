@@ -21,6 +21,7 @@ local options = {
   termguicolors = true,                   -- enable 24-bit RBG color; requires your terminal to support this feature
   updatetime = 250,                       -- shorten update time, mostly for CursorHold event
   laststatus = 3,                         -- enable global status line
+  cmdheight = 0,                          -- do not display the command-line unless used (experimental)
   showmode = false,                       -- do not show the mode on the last line
   showcmd = false,                        -- do not show cmd in the last line
   ruler = false,                          -- do not show the ruler in the last line
