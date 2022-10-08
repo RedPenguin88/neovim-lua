@@ -27,17 +27,6 @@ local options = {
   fillchars = { eob = " " }               -- do not show `~` on empty lines
 }
 
--- Set the characters that separate splits to be slightly thicker
-vim.opt.fillchars:append({
-  horiz = '━',
-  horizup = '┻',
-  horizdown = '┳',
-  vert = '┃',
-  vertleft = '┨',
-  vertright = '┣',
-  verthoriz = '╋',
-})
-
 for k, v in pairs(options) do
   vim.opt[k] = v
 end

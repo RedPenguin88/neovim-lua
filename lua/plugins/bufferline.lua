@@ -3,6 +3,11 @@ if not ok then
   return
 end
 
+local ctp_ok, ctp_bufferline = pcall(require, "catppuccin.groups.integrations.bufferline")
+if not ctp_ok then
+  return
+end
+
 bufferline.setup {
   options = {
     close_command = "Bdelete! %d",
@@ -13,10 +18,5 @@ bufferline.setup {
     separator_style = "thin",
     offsets = { { filetype = "NvimTree", text = "File Explorer", padding = 1, text_align = "center" } },
   },
-  highlights = {
-    fill = { bg = { attribute = "bg", highlight = "Normal" } },
-    separator = { fg = { attribute = "bg", highlight = "Normal" } },
-    separator_selected = { fg = { attribute = "bg", highlight = "Normal" } },
-    separator_visible = { fg = { attribute = "bg", highlight = "Normal" } },
-  }
+  highlights = ctp_bufferline.get()
 }
