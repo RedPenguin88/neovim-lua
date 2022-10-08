@@ -33,6 +33,7 @@ return packer.startup({function(use)
   use {
 	  "catppuccin/nvim",
 	  as = "catppuccin",
+    run = ":CatppuccinCompile",
 	  config = function()
 		  vim.g.catppuccin_flavour = "macchiato" -- latte, frappe, macchiato, mocha
 		  require("plugins.colorscheme")
