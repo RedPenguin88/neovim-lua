@@ -9,11 +9,12 @@ bufferline.setup {
   options = {
     close_command = "Bdelete! %d",
     right_mouse_command = "Bdelete! %d",
+    indicator = { style = 'none' },
     buffer_close_icon = "",
     modified_icon = "",
     show_close_icon = false,
     separator_style = "thin",
-    offsets = { { filetype = "NvimTree", text = "File Explorer", padding = 1, text_align = "center" } },
+    offsets = { { filetype = "NvimTree", text = "File Explorer", text_align = "center", separator = false } },
   },
   highlights = ctp_bufferline.get {
     custom = {
