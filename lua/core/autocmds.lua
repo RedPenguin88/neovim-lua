@@ -39,6 +39,13 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 	callback = function()
 		package.loaded["feline"] = nil
 		package.loaded["catppuccin.groups.integrations.feline"] = nil
+    require("catppuccin.groups.integrations.feline").setup {
+      assets = {
+        left_separator = "",
+        right_separator = "",
+        mode_icon = "",
+      },
+    }
 		require("feline").setup {
 			components = require("catppuccin.groups.integrations.feline").get(),
     }
