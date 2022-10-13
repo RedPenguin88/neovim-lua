@@ -23,6 +23,7 @@ local options = {
   updatetime = 250,                       -- shorten update time, mostly for CursorHold event
   laststatus = 3,                         -- enable global status line
   cmdheight = 0,                          -- do not display the command-line unless used (experimental)
+  conceallevel = 2,                       -- hide certain text for clarity (e.g. LaTeX)
   showmode = false,                       -- do not show the mode on the last line
   showcmd = false,                        -- do not show cmd in the last line
   ruler = false,                          -- do not show the ruler in the last line

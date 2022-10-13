@@ -6,7 +6,8 @@ end
 config.setup {
   ensure_installed = "all",
   highlight = {
-    enable = true
+    enable = true,
+    disable = { "latex" },
   },
   indent = {
     enable = true

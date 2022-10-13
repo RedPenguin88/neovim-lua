@@ -162,6 +162,11 @@ return packer.startup({function(use)
     "declancm/cinnamon.nvim",
     config = function() require("plugins.cinnamon") end
   }
+  -- LaTeX
+  use {
+    "lervag/vimtex",
+    config = function() require("plugins.vimtex") end
+  }
 
   if PACKER_BOOTSTRAP then
     print "*******************************************************"
