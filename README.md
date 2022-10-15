@@ -1,9 +1,7 @@
-# minvim
+![neovim_alpha](https://user-images.githubusercontent.com/105743189/183456357-32a52d1a-36cf-43c6-9f0d-0cccd26c2f20.png)
+![neovim_showcase](https://user-images.githubusercontent.com/105743189/183456408-b283975d-1d83-4eef-854d-6d45c30d8748.png)
 
-![minvim_alpha](https://user-images.githubusercontent.com/105743189/183456357-32a52d1a-36cf-43c6-9f0d-0cccd26c2f20.png)
-![minvim_showcase](https://user-images.githubusercontent.com/105743189/183456408-b283975d-1d83-4eef-854d-6d45c30d8748.png)
-
-My (not so) minimal, and opinionated neovim configuration using neovim 0.7+.
+My (not so) minimal, and opinionated neovim configuration using neovim 0.8+.
 
 ## Plugins
 
@@ -20,7 +18,7 @@ My (not so) minimal, and opinionated neovim configuration using neovim 0.7+.
 ## Dependencies
 
 - One [Nerd Font](https://www.nerdfonts.com/font-downloads) of your choice
-- [Neovim 0.7](https://github.com/neovim/neovim/wiki/Installing-Neovim)
+- [Neovim 0.8](https://github.com/neovim/neovim/wiki/Installing-Neovim)
 - Terminal which has true color support; see [this](https://github.com/termstandard/colors) for more information
 
 ### Optional Dependencies
