@@ -157,11 +157,6 @@ return packer.startup({function(use)
     "goolord/alpha-nvim",
     config = function() require("plugins.alpha") end
   }
-  -- Smooth scrolling
-  use {
-    "declancm/cinnamon.nvim",
-    config = function() require("plugins.cinnamon") end
-  }
   -- LaTeX
   use {
     "lervag/vimtex",
