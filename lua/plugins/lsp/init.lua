@@ -43,8 +43,7 @@ if not cmp_ok then
 end
 
 -- Add additional capabilities supported by nvim-cmp
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = cmp_nvim_lsp.update_capabilities(capabilities)
+local capabilities = cmp_nvim_lsp.default_capabilities()
 
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
@@ -93,7 +92,8 @@ local opts = {}
 for _, server in ipairs(servers) do
   opts = {
     on_attach = on_attach,
-    handlers = handlers
+    handlers = handlers,
+    capabilities = capabilities
   }
   if server == "sumneko_lua" then
     opts = vim.tbl_extend("force", require("plugins.lsp.settings.sumneko_lua"), opts)
