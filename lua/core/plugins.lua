@@ -160,6 +160,7 @@ return packer.startup({function(use)
   -- LaTeX
   use {
     "lervag/vimtex",
+    ft = "tex",
     config = function() require("plugins.vimtex") end
   }
 
