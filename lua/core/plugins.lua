@@ -157,12 +157,6 @@ return packer.startup({function(use)
     "goolord/alpha-nvim",
     config = function() require("plugins.alpha") end
   }
-  -- LaTeX
-  use {
-    "lervag/vimtex",
-    ft = "tex",
-    config = function() require("plugins.vimtex") end
-  }
 
   if PACKER_BOOTSTRAP then
     print "*******************************************************"
