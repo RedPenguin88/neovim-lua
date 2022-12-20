@@ -4,6 +4,7 @@ if not ok then
 end
 
 catppuccin.setup {
+  flavour = "macchiato", -- latte, frappe, macchiato, mocha
   term_colors = true,
   dim_inactive = { enabled = false },
   integrations = {

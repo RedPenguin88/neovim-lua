@@ -35,13 +35,9 @@ packer.startup({function(use)
   use "kyazdani42/nvim-web-devicons"
   -- Colorscheme
   use {
-	  "catppuccin/nvim",
-	  as = "catppuccin",
-    run = ":CatppuccinCompile",
-	  config = function()
-		  vim.g.catppuccin_flavour = "macchiato" -- latte, frappe, macchiato, mocha
-		  require("plugins.colorscheme")
-	  end
+    "catppuccin/nvim",
+    as = "catppuccin",
+    config = function() require("plugins.colorscheme") end
   }
   -- Syntax Highlighting via treesitter
   use {
