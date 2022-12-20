@@ -14,6 +14,7 @@ catppuccin.setup {
     telescope = true,
     treesitter = true,
     markdown = true,
+    mason = true,
     indent_blankline = {
       enabled = true,
       colored_indent_levels = false,

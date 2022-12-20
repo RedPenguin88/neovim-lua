@@ -3,7 +3,7 @@ if not ok then
   return
 end
 
-require("plugins.lsp.lsp-installer")
+require("plugins.lsp.mason")
 
 local signs = {
   { name = "DiagnosticSignError", text = "" },
@@ -85,9 +85,19 @@ local on_attach = function(client, bufnr)
 end
 
 -- Enable the following language servers
-local servers = { 'clangd', 'rust_analyzer', 'pyright', 'tsserver', 'sumneko_lua' }
+local servers = { "clangd", "rust_analyzer", "pyright", "tsserver", "sumneko_lua", "gopls" }
 
 local opts = {}
+
+local mason_ok, mason_lspconfig = pcall(require, "mason-lspconfig")
+if not mason_ok then
+  return
+end
+
+mason_lspconfig.setup({
+	ensure_installed = servers,
+	automatic_installation = true,
+})
 
 for _, server in ipairs(servers) do
   opts = {
